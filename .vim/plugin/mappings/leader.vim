@@ -1,7 +1,7 @@
 " Leader mappings
 
 " Fast buffer closing
-map <Leader>q :Bclose<CR>
+map <Leader>q :bd<CR>
 map <Leader>Q :%bd<CR>
 
 " Fast save
