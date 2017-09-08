@@ -15,12 +15,8 @@ vnoremap <Leader>S y:execute @@<CR>
 nnoremap <Leader>S ^vg_y:execute @@<CR>
 
 " Open current working directory in the systems file explorer
-" @TODO Make system independent
-if has('win32')
-  nnoremap <Leader>O :!start .<CR>
-elseif has('mac')
-  nnoremap <Leader>O :!open .<CR>
-endif
+" Depends on https://npmjs.com/package/opn-cli
+nnoremap <Leader>O :!opn .<CR>
 
 " Plugin -- EasyMotion
 " Move to {char} on current line
