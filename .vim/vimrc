@@ -52,6 +52,7 @@ set runtimepath+=~/dotfiles/.vim
 if has('gui_running')
   " Turn off scrollbars. (Default on macOS is "egmrL").
   set guioptions=i
+  set guitablabel=%t
 
   " Temporary workaround for MacVim. It supposedly has +python/dyn and
   " +python3/dyn, but if Python 3 loads first, YCM won't work. Force
@@ -62,6 +63,7 @@ if has('gui_running')
   colorscheme monokai
   set guifont=Fira_Code:h14
   set conceallevel=0
+  set relativenumber
 
   " Highlight lines exceeding 80 chararecters
   highlight ColorColumn ctermbg=magenta guibg=Magenta
