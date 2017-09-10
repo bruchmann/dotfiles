@@ -63,7 +63,6 @@ if has('gui_running')
   colorscheme monokai
   set guifont=Fira_Code:h14
   set conceallevel=0
-  set relativenumber
 
   " Highlight lines exceeding 80 chararecters
   highlight ColorColumn ctermbg=magenta guibg=Magenta
