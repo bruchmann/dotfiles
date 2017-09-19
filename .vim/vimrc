@@ -35,6 +35,7 @@ set wildignore+=*.zip
 set wildignore+=*.exe
 set wildignore+=*\\node_modules\\*
 set wildignore+=*\\package-lock.json
+set wildignore+=*\\yarn.lock
 
 " Use UNIX line endings
 set fileformat=unix
