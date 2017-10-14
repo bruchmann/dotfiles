@@ -3,17 +3,13 @@ set nocompatible
 
 " Self-explonentary
 set encoding=utf-8
+syntax on
 
 " Set $MYVIMRC path to this file -- simulates symlinking on Windows
 let $MYVIMRC = "~/dotfiles/.vim/vimrc"
 
 let mapleader="\<Space>"
 let maplocalleader=","
-
-" Automatic, language-dependent indentation, syntax coloring and other
-" functionality.
-filetype indent plugin on
-syntax on
 
 " Disable backups -- YOLO
 set nowritebackup
@@ -76,6 +72,32 @@ try
 catch
 endtry
 
-" Load pathogen
-runtime ~/vimfiles/autoload/pathogen.vim
-call pathogen#infect()
+" Configure Vundle
+filetype off
+set rtp+=$HOME/dotfiles/.vim/bundle/Vundle.vim/
+call vundle#begin('$HOME/dotfiles/.vim/bundle/')
+Plugin 'vundle/Vundle.vim'
+
+Plugin 'easymotion/vim-easymotion'
+Plugin 'editorconfig/editorconfig-vim.git'
+Plugin 'elmcast/elm-vim'
+Plugin 'haya14busa/vim-textobj-function-syntax'
+Plugin 'kana/vim-textobj-function'
+Plugin 'kana/vim-textobj-user'
+Plugin 'mattn/emmet-vim'
+Plugin 'skywind3000/asyncrun.vim'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'thinca/vim-textobj-function-javascript'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe.git'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline.git'
+Plugin 'vim-scripts/auto-pairs-gentle'
+Plugin 'w0rp/ale'
+Plugin 'wellle/targets.vim'
+Plugin 'wellle/visual-split.vim'
+
+call vundle#end()
+filetype plugin indent on
