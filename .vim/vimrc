@@ -60,7 +60,6 @@ if has('gui_running')
   " Python 2 to load first.
   call has('python')
 
-  syntax on
   colorscheme monokai
   set guifont=Fira_Code:h14
   set conceallevel=0
