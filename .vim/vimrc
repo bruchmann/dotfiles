@@ -56,7 +56,9 @@ if has('gui_running')
   " Python 2 to load first.
   call has('python')
 
+  " Set default colorscheme
   colorscheme monokai
+
   set guifont=Fira_Code:h14
   set conceallevel=0
 
@@ -98,6 +100,13 @@ Plugin 'vim-scripts/auto-pairs-gentle'
 Plugin 'w0rp/ale'
 Plugin 'wellle/targets.vim'
 Plugin 'wellle/visual-split.vim'
+Plugin 'arcticicestudio/nord-vim'
 
 call vundle#end()
 filetype plugin indent on
+
+" Set colorscheme after bundles have been initialized
+" See https://github.com/VundleVim/Vundle.vim/issues/119#issuecomment-3089923
+if has('gui_running')
+  colorscheme nord
+endif
