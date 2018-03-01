@@ -104,8 +104,9 @@ Plugin 'arcticicestudio/nord-vim'
 call vundle#end()
 filetype plugin indent on
 
-" Set colorscheme after bundles have been initialized
-" See https://github.com/VundleVim/Vundle.vim/issues/119#issuecomment-3089923
 if has('gui_running')
+  " Set colorscheme after bundles have been initialized
+  " See https://github.com/VundleVim/Vundle.vim/issues/119#issuecomment-3089923
+  let g:nord_italic = 0
   colorscheme nord
 endif
