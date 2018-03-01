@@ -110,3 +110,4 @@ if has('gui_running')
   let g:nord_italic = 0
   colorscheme nord
 endif
+set rtp+=$HOME/dotfiles/.vim/plugin/
