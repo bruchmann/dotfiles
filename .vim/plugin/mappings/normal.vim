@@ -22,6 +22,9 @@ nnoremap p p=`]
 " Visually select current line without indentation
 nnoremap vv ^vg_
 
+" Move by paragraph -- https://www.reddit.com/r/vim/comments/458buq/moving_by_paragraph/
+nnoremap <EXPR> { len(getline(line('.')-1)) > 0 ? '{+' : '{-'
+nnoremap <EXPR> } len(getline(line('.')+1)) > 0 ? '}-' : '}+'
 
 " Window resizing
 nnoremap <C-Down> 5<C-w>-
