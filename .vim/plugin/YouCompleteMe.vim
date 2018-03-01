@@ -6,4 +6,10 @@ let g:tern_show_argument_hints = 'on_hold'
 if !exists("g:ycm_semantic_triggers")
 	let g:ycm_semantic_triggers = {}
 endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
+let g:ycm_semantic_triggers = {
+      \ 'css': [ 're!^\t+[a-z\-]', 're!:\s+' ],
+      \ 'elm': ['.'],
+      \ 'html': ['<'],
+      \ 'typescript' : ['.'],
+      \ 'xml': ['<'],
+      \}
