@@ -4,8 +4,8 @@
 map <Leader>q :bd<CR>
 map <Leader>Q :%bd<CR>
 
-" Fast save
-map <Leader>w :w<CR>
+" Quick save
+nnoremap <Leader>w :w<CR>
 
 " Quick vimrc editing
 nmap <Leader>ev :vsp $MYVIMRC<CR>
