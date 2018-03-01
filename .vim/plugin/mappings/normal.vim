@@ -39,8 +39,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Toggle relative line numbers
-nnoremap <C-n> :setlocal relativenumber!<CR>
-
+nnoremap <C-n> :exec &relativenumber ? "setlocal relativenumber!" : "setlocal relativenumber"<CR>
 
 " 0 jumps to the first printable character
 nnoremap 0 ^
