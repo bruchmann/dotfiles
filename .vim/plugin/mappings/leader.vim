@@ -18,22 +18,6 @@ nnoremap <Leader>S ^vg_y:execute @@<CR>
 " Depends on https://npmjs.com/package/opn-cli
 nnoremap <Leader>O :!opn .<CR>
 
-" Plugin -- EasyMotion
-" Move to {char} on current line
-nnoremap  <Leader>m <Plug>(easymotion-bd-f)
-nnoremap <Leader>m <Plug>(easymotion-overwin-f)
-
-" Move to line
-nnoremap <Leader>l <Plug>(easymotion-bd-jk)
-nnoremap <Leader>l <Plug>(easymotion-overwin-line)
-
-" Move to word
-nnoremap <Leader>w <Plug>(easymotion-bd-w)
-nnoremap <Leader>w <Plug>(easymotion-overwin-w)
-
-" Plugin -- SplitJoin
-nnoremap <Leader>j :SplitjoinJoin<CR>
-nnoremap <Leader>s :SplitjoinSplit<CR>
 
 " Plugin -- Fugitive
 nnoremap <Leader>ga :Git add %:p<CR><CR>
