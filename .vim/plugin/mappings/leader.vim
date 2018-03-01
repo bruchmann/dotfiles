@@ -1,8 +1,10 @@
 " Leader mappings
 
 " Fast buffer closing
-map <Leader>q :bd<CR>
-map <Leader>Q :%bd<CR>
+nnoremap <Leader>q :bd<CR>
+nnoremap <Leader>qq :%bd<CR>
+nnoremap <Leader>Q :bd<CR>
+nnoremap <Leader>QQ :%bd!<CR>
 
 " Quick save
 nnoremap <Leader>w :w<CR>
