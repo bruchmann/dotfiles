@@ -5,6 +5,8 @@ let g:ale_lint_on_text_changed = "never"
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = "╳"
 let g:ale_sign_warning = "➤"
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 let g:ale_fixers = {
 			\   'javascript': [
