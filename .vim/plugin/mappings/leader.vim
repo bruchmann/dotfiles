@@ -16,7 +16,7 @@ nnoremap <Leader>S ^vg_y:execute @@<CR>
 
 " Open current working directory in the systems file explorer
 " Depends on https://npmjs.com/package/opn-cli
-nnoremap <Leader>O :!opn .<CR>
+nnoremap <Leader>O :AsyncRun! opn .<CR>
 
 
 " Plugin -- Fugitive
