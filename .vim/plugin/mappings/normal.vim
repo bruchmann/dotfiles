@@ -22,11 +22,6 @@ nnoremap p p=`]
 " Visually select current line without indentation
 nnoremap vv ^vg_
 
-" QWERTY sucks for programming
-nnoremap ö {
-nnoremap Ö [
-nnoremap ä }
-nnoremap Ä ]
 
 " Window resizing
 nnoremap <C-Down> 5<C-w>-
