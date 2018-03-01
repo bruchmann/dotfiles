@@ -8,7 +8,7 @@ map <Leader>Q :%bd<CR>
 nnoremap <Leader>w :w<CR>
 
 " Quick vimrc editing
-nmap <Leader>ev :vsp $MYVIMRC<CR>
+nnoremap <Leader>ev :vsp $MYVIMRC<CR>
 
 " Source current line or visual selection
 vnoremap <Leader>S y:execute @@<CR>
