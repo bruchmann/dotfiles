@@ -80,7 +80,6 @@ set rtp+=$HOME/dotfiles/.vim/bundle/Vundle.vim/
 call vundle#begin('$HOME/dotfiles/.vim/bundle/')
 Plugin 'vundle/Vundle.vim'
 
-Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim.git'
 Plugin 'elmcast/elm-vim'
 Plugin 'haya14busa/vim-textobj-function-syntax'
