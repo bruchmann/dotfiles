@@ -4,7 +4,6 @@ alias ~='cd ~'
 alias ls='ls -AFGhl --color=auto --group-directories-first --show-control-chars'
 alias md='mkdir -p'
 alias rm='rm -i'
-alias cat='bat'
 
 function take () {
 	md $1
