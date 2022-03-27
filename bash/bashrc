@@ -1,22 +1,20 @@
 alias ..='cd ../'
 alias ...=../'cd ../'
 alias ~='cd ~'
-alias cdc='cd ~/dev/code/'
-alias cdd='cd ~/dotfiles/'
-alias cdp='cd ~/dev/projects/'
 alias ls='ls -AFGhl --color=auto --group-directories-first --show-control-chars'
 alias md='mkdir -p'
 alias rm='rm -i'
+alias cat='bat'
 
 function take () {
 	md $1
 	cd $1
 }
 
-alias git="hub"
-
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
+shopt -s autocd
+shopt -s histappend
 
 # Colors for less
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -27,6 +25,9 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-function ldeps() {
-	cat $1 | json dependencies devDependencies optionalDependencies peerDependencies bundledDependencies
-}
+# set -o vi
+# bind -m vi-command 'Control-l: clear-screen'
+# bind -m vi-insert 'Control-l: clear-screen'
+# bind -m vi-insert 'Control-i: menu-complete'
+
+source ~/.bash-powerline.sh

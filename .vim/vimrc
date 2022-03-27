@@ -32,40 +32,14 @@ set wildignore+=*.exe
 set wildignore+=*\\node_modules\\*
 set wildignore+=*\\package-lock.json
 set wildignore+=*\\yarn.lock
+set wildignore+=*\\elm-stuff
 
 " Use UNIX line endings
 set fileformat=unix
 set fileformats=unix
 
-" Windows specific settings
-if has('win32')
-  let $PYTHONPATH = "C:\\Python36\\Lib;C:\\Python36\\DLLs;C:\\Python36\\Lib\\lib-tk"
-endif
-
 " Add current directory to runtimepath
 set runtimepath+=~/dotfiles/.vim
-
-" GUI specific settings
-if has('gui_running')
-  " Turn off scrollbars. (Default on macOS is "egmrL").
-  set guioptions=i
-  set guitablabel=%t
-
-  " Temporary workaround for MacVim. It supposedly has +python/dyn and
-  " +python3/dyn, but if Python 3 loads first, YCM won't work. Force
-  " Python 2 to load first.
-  call has('python')
-
-  " Set default colorscheme
-  colorscheme monokai
-
-  set guifont=Fira_Code:h14
-  set conceallevel=0
-
-  " Highlight lines exceeding 80 chararecters
-  highlight ColorColumn ctermbg=magenta guibg=Magenta
-  call matchadd('ColorColumn', '\%81v', 100)
-endif
 
 " Specify the behavior when switching between buffers
 try
@@ -74,40 +48,38 @@ try
 catch
 endtry
 
+source plugin/settings.vim
+source plugin/mappings/command.vim
+source plugin/mappings/normal.vim
+source plugin/mappings/visual.vim
+source plugin/mappings/leader.vim
+
 " Configure Vundle
-filetype off
-set rtp+=$HOME/dotfiles/.vim/bundle/Vundle.vim/
-call vundle#begin('$HOME/dotfiles/.vim/bundle/')
-Plugin 'vundle/Vundle.vim'
-
-Plugin 'editorconfig/editorconfig-vim.git'
-Plugin 'elmcast/elm-vim'
-Plugin 'haya14busa/vim-textobj-function-syntax'
-Plugin 'kana/vim-textobj-function'
-Plugin 'kana/vim-textobj-user'
-Plugin 'mattn/emmet-vim'
-Plugin 'skywind3000/asyncrun.vim'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'thinca/vim-textobj-function-javascript'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'tpope/vim-repeat.git'
-Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe.git'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-airline/vim-airline.git'
-Plugin 'vim-scripts/auto-pairs-gentle'
-Plugin 'w0rp/ale'
-Plugin 'wellle/targets.vim'
-Plugin 'wellle/visual-split.vim'
-Plugin 'arcticicestudio/nord-vim'
-
-call vundle#end()
-filetype plugin indent on
-
-if has('gui_running')
-  " Set colorscheme after bundles have been initialized
-  " See https://github.com/VundleVim/Vundle.vim/issues/119#issuecomment-3089923
-  let g:nord_italic = 0
-  colorscheme nord
-endif
-set rtp+=$HOME/dotfiles/.vim/plugin/
+" filetype off
+" set rtp+=$HOME/dotfiles/.vim/bundle/Vundle.vim/
+" call vundle#begin('$HOME/dotfiles/.vim/bundle/')
+" Plugin 'vundle/Vundle.vim'
+" 
+" Plugin 'editorconfig/editorconfig-vim.git'
+" Plugin 'elmcast/elm-vim'
+" Plugin 'haya14busa/vim-textobj-function-syntax'
+" Plugin 'kana/vim-textobj-function'
+" Plugin 'kana/vim-textobj-user'
+" Plugin 'mattn/emmet-vim'
+" Plugin 'skywind3000/asyncrun.vim'
+" Plugin 'ternjs/tern_for_vim'
+" Plugin 'thinca/vim-textobj-function-javascript'
+" Plugin 'tpope/vim-fugitive.git'
+" Plugin 'tpope/vim-repeat.git'
+" Plugin 'tpope/vim-surround'
+" Plugin 'Valloric/YouCompleteMe.git'
+" Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline.git'
+" Plugin 'vim-scripts/auto-pairs-gentle'
+" Plugin 'w0rp/ale'
+" Plugin 'wellle/targets.vim'
+" Plugin 'wellle/visual-split.vim'
+" Plugin 'arcticicestudio/nord-vim'
+" 
+" call vundle#end()
+" filetype plugin indent on
