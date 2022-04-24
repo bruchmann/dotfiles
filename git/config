@@ -1,0 +1,22 @@
+[core]
+  editor = /usr/local/bin/nvim
+  pager = delta
+
+[delta]
+  navigate = true
+
+[diff]
+  colorMoved = default
+
+[init]
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
+[merge]
+  conflictStyle = diff3
+
+[user]
+  email = github@sbruchmann.me
+  name = Steffen Bruchmann

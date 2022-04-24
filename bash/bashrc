@@ -1,19 +1,41 @@
-alias ..='cd ../'
-alias ...=../'cd ../'
-alias ~='cd ~'
-alias ls='ls -AFGhl --color=auto --group-directories-first --show-control-chars'
-alias md='mkdir -p'
-alias rm='rm -i'
-
-function take () {
-	md $1
-	cd $1
-}
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 shopt -s autocd
+
+# append to the history file, don't overwrite it
 shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+shopt -s globstar
+
+# enable programmable completion features
+if ! shopt -oq posix; then
+	if [ -f /usr/share/bash-completion/bash_completion ]; then
+		. /usr/share/bash-completion/bash_completion
+	elif [ -f /etc/bash_completion ]; then
+		. /etc/bash_completion
+	fi
+fi
+
+#     ______                           __
+#    / ____/_  __ ____   ____   _____ / /_ _____
+#   / __/  | |/_// __ \ / __ \ / ___// __// ___/
+#  / /___ _>  < / /_/ // /_/ // /   / /_ (__  )
+# /_____//_/|_|/ .___/ \____//_/    \__//____/
+#             /_/
 
 # Colors for less
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -24,4 +46,49 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-source ./dotfiles/bash/powerline.sh
+# FZF
+export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# BAT
+export BAT_STYLE="changes,grid"
+export BAT_THEME="Nord"
+
+#     ___     __ _
+#    /   |   / /(_)____ _ _____ ___   _____
+#   / /| |  / // // __ `// ___// _ \ / ___/
+#  / ___ | / // // /_/ /(__  )/  __/(__  )
+# /_/  |_|/_//_/ \__,_//____/ \___//____/
+
+alias ..='cd ../'
+alias ...=../'cd ../'
+alias ~='cd ~'
+alias ls='ls -AFGhl --color=auto --group-directories-first --show-control-chars'
+alias md='mkdir -p'
+alias rm='rm -i'
+alias mv='mv -i'
+
+
+#     ______                     __
+#    / ____/__  __ ____   _____ / /_ (_)____   ____   _____
+#   / /_   / / / // __ \ / ___// __// // __ \ / __ \ / ___/
+#  / __/  / /_/ // / / // /__ / /_ / // /_/ // / / /(__  )
+# /_/     \__,_//_/ /_/ \___/ \__//_/ \____//_/ /_//____/
+
+
+function take () {
+	mkdir -p $1
+	cd $1
+}
+
+#     __  ____                ____
+#    /  |/  (_)____________  / / /___ _____  ___  ____  __  _______
+#   / /|_/ / / ___/ ___/ _ \/ / / __ `/ __ \/ _ \/ __ \/ / / / ___/
+#  / /  / / (__  ) /__/  __/ / / /_/ / / / /  __/ /_/ / /_/ (__  )
+# /_/  /_/_/____/\___/\___/_/_/\__,_/_/ /_/\___/\____/\__,_/____/
+
+source ~/dotfiles/bash/powerline.sh
