@@ -17,8 +17,8 @@ hc emit_hook reload
 hc keyunbind --all
 
 # Use Super as primary mod-key, Meta as secondary mod-key
-Mod=Mod4    # Use alt as the main modifier
-Mod2=Mod1   # Use the super key as the main modifier
+Mod=Mod4
+Mod2=Mod1
 
 hc keybind $Mod-q close_and_remove
 hc keybind $Mod-Shift-r reload
