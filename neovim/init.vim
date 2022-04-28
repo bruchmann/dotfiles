@@ -172,7 +172,7 @@ Plug 'nvim-lua/plenary.nvim'
 " Plug 'm-demare/hlargs.nvim'
 " Plug 'windwp/nvim-ts-autotag'
 " Plug 'folke/twilight.nvim'
-Plug 'neovim/nvim-lspconfig'
+" Plug 'neovim/nvim-lspconfig'
 
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
@@ -259,13 +259,13 @@ require('Comment').setup{}
 -- local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 -- cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' }}))
 
-require'lspconfig'.cssls.setup{}
-require'lspconfig'.html.setup{}
-require'lspconfig'.jsonls.setup{}
-require'lspconfig'.remark_ls.setup{}
-require'lspconfig'.tsserver.setup{}
-require'lspconfig'.vimls.setup{}
-require'lspconfig'.yamlls.setup{}
+-- require'lspconfig'.cssls.setup{}
+-- require'lspconfig'.html.setup{}
+-- require'lspconfig'.jsonls.setup{}
+-- require'lspconfig'.remark_ls.setup{}
+-- require'lspconfig'.tsserver.setup{}
+-- require'lspconfig'.vimls.setup{}
+-- require'lspconfig'.yamlls.setup{}
 
 require('lualine').setup {
   options = {
