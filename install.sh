@@ -11,6 +11,9 @@ ln --symbolic ~/dotfiles/git/attributes ~/.gitattributes
 ln --symbolic ~/dotfiles/git/config ~/.gitconfig
 ln --symbolic ~/dotfiles/git/ignore ~/.gitignore
 
+mkdir -p ~/.config/flameshot/
+ln --symbolic ~/dotfiles/flameshot.ini ~/.config/flameshot/flameshot.init
+
 mkdir -p ~/.config/herbstluftwm/
 ln --symbolic ~/dotfiles/herbstluftwm/autostart ~/.config/herbstluftwm/autostart
 
