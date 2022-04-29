@@ -28,6 +28,7 @@ hc keybind $Mod-Shift-Return spawn gnome-terminal -e nvim
 hc keybind $Mod2-Return spawn epiphany
 hc keybind $Mod2-Shift-Return chain , split right 0.5 , focus right , spawn epiphany "https://news.ycombinator.com/"
 hc keybind Print spawn flameshot gui
+hc keybind Shift-Print spawn flameshot launcher
 
 # basic movement in tiling and floating mode
 # focusing clients
