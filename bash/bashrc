@@ -66,8 +66,7 @@ export BAT_THEME="Nord"
 
 alias ..='cd ../'
 alias ...=../'cd ../'
-alias ~='cd ~'
-alias ls='ls -AFGhl --color=auto --group-directories-first --show-control-chars'
+alias ll='ls -AFGhl --color=auto --group-directories-first --show-control-chars'
 alias md='mkdir -p'
 alias rm='rm -i'
 alias mv='mv -i'
