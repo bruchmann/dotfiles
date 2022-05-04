@@ -155,3 +155,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
 # /_/  /_/_/____/\___/\___/_/_/\__,_/_/ /_/\___/\____/\__,_/____/
 
 source ~/dotfiles/bash/powerline.sh
+
+# Not tracked in VCS -- duh
+source ~/dotfiles/bash/secrets.sh
