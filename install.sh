@@ -7,6 +7,9 @@ ln --symbolic ~/dotfiles/xsession ~/.xsession
 
 ln --symbolic ~/dotfiles/bash/bashrc ~/.bashrc
 
+mkdir -p ~/.config/dunst/
+ln --symbolic ~/dotfiles/dunstrc ~/.config/dunst/dunstrc
+
 ln --symbolic ~/dotfiles/git/attributes ~/.gitattributes
 ln --symbolic ~/dotfiles/git/config ~/.gitconfig
 ln --symbolic ~/dotfiles/git/ignore ~/.gitignore
