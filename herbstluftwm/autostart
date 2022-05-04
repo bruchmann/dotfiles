@@ -22,7 +22,7 @@ Mod2=Mod1
 
 hc keybind $Mod-q close_and_remove
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-space spawn rofi -no-config -no-lazy-grab -show combi -modi combi,drun,ssh -combi-modi window,drun,ssh -theme ~/.config/polybar/hack/scripts/rofi/launcher.rasi
+hc keybind $Mod-space spawn rofi -no-config -no-lazy-grab -show combi -modi combi,drun,ssh -combi-modi window,drun,ssh -theme ~/dotfiles/polybar/scripts/rofi/launcher.rasi
 hc keybind $Mod-Return spawn gnome-terminal
 hc keybind $Mod-Shift-Return spawn gnome-terminal -e nvim
 hc keybind $Mod2-Return spawn epiphany
