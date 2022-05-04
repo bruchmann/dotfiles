@@ -30,8 +30,8 @@ elif [[ "$VALUE_TITLE" == *"The Trip"* ]]; then
 fi
 
 PATH_NOW_PLAYING='//info[@name="now_playing"]/text()'
-# TODO: Decode value and find a way to avoid printing "XPath set is empty"
-VALUE_NOW_PLAYING=$(echo $STATUS | xmllint --xpath $PATH_NOW_PLAYING -)
+# TODO: Decode value
+VALUE_NOW_PLAYING=$(echo $STATUS | xmllint --xpath $PATH_NOW_PLAYING - 2>/dev/null)
 NOW_PLAYING_TRIMMED=$(echo $VALUE_NOW_PLAYING | sed 's/\(.\{50\}\).*/\1.../')
 
 echo "$NOW_PLAYING_TRIMMED @ $STATION_TITLE"
