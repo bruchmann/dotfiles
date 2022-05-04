@@ -32,6 +32,6 @@ fi
 PATH_NOW_PLAYING='//info[@name="now_playing"]/text()'
 # TODO: Decode value and find a way to avoid printing "XPath set is empty"
 VALUE_NOW_PLAYING=$(echo $STATUS | xmllint --xpath $PATH_NOW_PLAYING -)
-NOW_PLAYING_TRIMMED=$(echo $VALUE_NOW_PLAYING | sed 's/\(.\{140\}\).*/\1.../')
+NOW_PLAYING_TRIMMED=$(echo $VALUE_NOW_PLAYING | sed 's/\(.\{50\}\).*/\1.../')
 
 echo "$NOW_PLAYING_TRIMMED @ $STATION_TITLE"
