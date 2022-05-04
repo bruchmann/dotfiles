@@ -20,6 +20,9 @@ ln --symbolic ~/dotfiles/herbstluftwm/autostart ~/.config/herbstluftwm/autostart
 mkdir -p ~/.config/neovim/
 ln --symbolic ~/dotfiles/neovim/init.vim ~/.config/neovim/init.vim
 
+mkdir -p ~/.config/picom/
+ln --symbolic ~/dotfiles/picom.conf ~/.config/picom/picom.conf
+
 mkdir -p ~/.config/tmux/
 ln --symbolic ~/dotfiles/tmux.conf ~/.config/tmux/tmux.conf
 mkdir -p ~/.config/tmux/plugins/
