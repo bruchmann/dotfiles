@@ -34,4 +34,8 @@ PATH_NOW_PLAYING='//info[@name="now_playing"]/text()'
 VALUE_NOW_PLAYING=$(echo $STATUS | xmllint --xpath $PATH_NOW_PLAYING - 2>/dev/null)
 NOW_PLAYING_TRIMMED=$(echo $VALUE_NOW_PLAYING | sed 's/\(.\{50\}\).*/\1.../')
 
-echo "$NOW_PLAYING_TRIMMED @ $STATION_TITLE"
+if [[ "$NOW_PLAYING_TRIMMED" != "" ]]; then
+	echo " $NOW_PLAYING_TRIMMED @ $STATION_TITLE"
+else
+	echo ""
+fi
